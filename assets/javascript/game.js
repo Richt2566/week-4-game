@@ -22,132 +22,97 @@ $(document).ready(function(){
   $("#computerCollection").text(computerNumber);
 
       $("#gypsum").on("click", function(){
-        //console.log("gypsum");
         gCounter++
-       var addGypsum = gypsumNumber * gCounter
+        var addGypsum = gypsumNumber * gCounter
         $("#userCollection").text(numberBank + gypsumNumber);
         $("#clicker").text("You clicked gypsum " + gCounter + " times.")
         numberBank = numberBank + gypsumNumber;
-        // console.log(numberBank);
-        // console.log(gypsumNumber);
-        // console.log(computerNumber);
 
         if (numberBank == computerNumber) {
-        wins++
-        $("#statement").text("You won that round!")
-        $("#winner").text("Wins: " + wins)
-        console.log("win");
-        //var newSecret = Math.floor(Math.random() * 122) + 1;
-        // computerNumber = newSecret
-        // $("#computerCollection").text(newSecret)
-        // var crySecret = Math.floor(Math.random() * 12) + 1;
-        // gypsumNumber = crySecret
-        // $("#userCollection").text(numberBank + crySecret)
-        reset();
-        //$("#statement").text("")
+            wins++
+            $("#statement").text("You won that round!")
+            $("#winner").text("Wins: " + wins)
+            reset();
         }
 
         if (numberBank > computerNumber) {
-        losses++
-        $("#statement").text("You lost that round!")
-        $("#loser").text("Losses: " + losses)
-        console.log("lose");
-        // var newSecret = Math.floor(Math.random() * 122) + 1;
-        // computerNumber = newSecret
-        // console.log(newSecret);
-        // $("#computerCollection").text(newSecret)
-        // var crySecret = Math.floor(Math.random() * 12) + 1;
-        // gypsumNumber = crySecret
-        // console.log(crySecret);
-        // $("#userCollection").text(crySecret)
-        reset();
-        //$("#statement").text("")
+            losses++
+            $("#statement").text("You lost that round!")
+            $("#loser").text("Losses: " + losses)
+            reset();
         }
       });
 
       $("#quartz").on("click", function(){
-        //console.log("quartz");
         qCounter++
         var addQuartz = quartzNumber * qCounter
         $("#userCollection").text(numberBank + quartzNumber);
         $("#clicker").text("You clicked quartz " + qCounter + " times.")
         numberBank = numberBank + quartzNumber;
-        // console.log(numberBank);
-        // console.log(quartzNumber);
-        // console.log(computerNumber);
       
         if (numberBank == computerNumber) {
-        wins++
-        $("#statement").text("You won that round!")
-        $("#winner").text("Wins: " + wins)
-        reset();
+            wins++
+            $("#statement").text("You won that round!")
+            $("#winner").text("Wins: " + wins)
+            reset();
         }
 
         if (numberBank > computerNumber) {
-        losses++
-        $("#statement").text("You lost that round!")
-        $("#loser").text("Losses: " + losses)
-        reset();
+            losses++
+            $("#statement").text("You lost that round!")
+            $("#loser").text("Losses: " + losses)
+            reset();
         }
       });
 
       $("#diamond").on("click", function(){
-        //console.log("diamond");
         dCounter++
         var addDiamond = diamondNumber * dCounter
         $("#userCollection").text(numberBank + diamondNumber)
         $("#clicker").text("You clicked diamond " + dCounter + " times.")
         numberBank = numberBank + diamondNumber;
-        // console.log(numberBank);
-        // console.log(diamondNumber);
-        // console.log(computerNumber);
       
         if (numberBank == computerNumber) {
-        wins++
-        $("#statement").text("You won that round!")
-        $("#winner").text("Wins: " + wins)
-        $("#winner").text("Wins: " + wins)
-        reset();
+            wins++
+            $("#statement").text("You won that round!")
+            $("#winner").text("Wins: " + wins)
+            $("#winner").text("Wins: " + wins)
+            reset();
         }
       
         if (numberBank > computerNumber) {
-        losses++
-        $("#statement").text("You lost that round!")
-        $("#loser").text("Losses: " + losses)
-        reset();
+            losses++
+            $("#statement").text("You lost that round!")
+            $("#loser").text("Losses: " + losses)
+            reset();
         }
 
       });
             
       $("#crystal").on("click", function(){
-        //console.log("crystal");
         cCounter++
         var addCrystal = crystalNumber * cCounter
         $("#userCollection").text(numberBank + crystalNumber)
         $("#clicker").text("You clicked crystal " + cCounter + " times.")
         numberBank = numberBank + crystalNumber;
-        // console.log(numberBank);
-        // console.log(crystalNumber);
-        // console.log(computerNumber);
       
         if (numberBank == computerNumber) {
-        wins++
-        $("#statement").text("You won that round!")
-        $("#winner").text("Wins: " + wins)
-        reset();
+            wins++
+            $("#statement").text("You won that round!")
+            $("#winner").text("Wins: " + wins)
+            reset();
         }
         
         if (numberBank > computerNumber) {
-        losses++
-        $("#statement").text("You lost that round!")
-        $("#loser").text("Losses: " + losses)
-        reset();
+            losses++
+            $("#statement").text("You lost that round!")
+            $("#loser").text("Losses: " + losses)
+            reset();
         }
 
       });
 
       var reset = function(){
-        //$("#statement").text("")
         numberBank = 0;
         var newSecret = Math.floor(Math.random() * 122) + 1;
         computerNumber = newSecret
